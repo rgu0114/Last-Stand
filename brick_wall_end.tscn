@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://5g3ay31kmtm2"]
+
+[ext_resource type="PackedScene" uid="uid://dqfwa2jbs0ugm" path="res://Models/BrickWall/brick-wall-end.glb" id="1_7p7u7"]
+[ext_resource type="Material" uid="uid://g6sa5yy6o2xi" path="res://Materials/brick_wall.tres" id="2_6e2g7"]
+
+[node name="brick-wall-end2" instance=ExtResource("1_7p7u7")]
+
+[node name="brick-wall-end" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_6e2g7")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6s5w3n6tiye5"]
+
+[ext_resource type="PackedScene" uid="uid://bukgm56d2cgsm" path="res://Models/BrickWall/brick-wall.glb" id="1_buif4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2lcps"]
+albedo_color = Color(0.804003, 0.403577, 0.360695, 1)
+
+[node name="brick-wall2" instance=ExtResource("1_buif4")]
+
+[node name="brick-wall" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_2lcps")

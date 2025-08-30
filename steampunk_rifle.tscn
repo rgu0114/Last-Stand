@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://cstfgs1lwlw4s"]
+
+[ext_resource type="PackedScene" uid="uid://dap5rdg76nkc8" path="res://Models/SteampunkGun/Steampunk Rifle.glb" id="1_1aecv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ccmvo"]
+metallic = 0.7
+metallic_specular = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dstv0"]
+albedo_color = Color(0.57911, 0.243799, 0.18912, 1)
+metallic_specular = 0.18
+
+[sub_resource type="Animation" id="Animation_7v55p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_iwyob"]
+resource_name = "Shoot"
+length = 0.1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.000472767, 0.0102433, 0.0991234),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.05), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wylas"]
+_data = {
+"RESET": SubResource("Animation_7v55p"),
+"Shoot": SubResource("Animation_iwyob")
+}
+
+[node name="Steampunk Rifle" instance=ExtResource("1_1aecv")]
+
+[node name="Node" parent="." index="0"]
+cast_shadow = 0
+surface_material_override/0 = SubResource("StandardMaterial3D_ccmvo")
+surface_material_override/1 = SubResource("StandardMaterial3D_dstv0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_wylas")
+}
+
+[node name="RayCast3D" type="RayCast3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.467073)
+target_position = Vector3(0, 0, -1)
