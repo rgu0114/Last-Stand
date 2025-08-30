@@ -66,6 +66,7 @@ emission_energy_multiplier = 3.0
 [node name="Map" type="Node3D" parent="."]
 
 [node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.309953, 0)
 material_override = SubResource("StandardMaterial3D_2dsjs")
 multimesh = SubResource("MultiMesh_3lr0b")
 
