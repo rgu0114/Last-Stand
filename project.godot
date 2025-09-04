@@ -60,8 +60,8 @@ escape={
 
 [wireframing]
 
-known_scenes=["res://Scenes/Player.tscn", "res://Scenes/bullet.tscn", "res://Scenes/World.tscn", "res://lightpost-single.tscn", "res://iron_fence.tscn", "res://brick_wall.tscn", "res://crypt.tscn", "res://brick_wall_end.tscn", "res://tree.tscn", "res://steampunk_rifle.tscn", "res://iron-fence-damaged.tscn", "res://grave.tscn", "res://gravestone-bevel.tscn", "res://road.tscn", "res://iron_fence_bar.tscn", "res://gravestone-broken-bevel.tscn"]
-manual_scenes=["res://Scenes/World.tscn", "res://crypt.tscn", "res://road.tscn", "res://brick_wall.tscn", "res://brick_wall_end.tscn", "res://grave.tscn", "res://gravestone-bevel.tscn", "res://gravestone-broken-bevel.tscn", "res://iron_fence.tscn", "res://iron-fence-damaged.tscn", "res://iron_fence_bar.tscn", "res://lightpost-single.tscn", "res://tree.tscn", "res://steampunk_rifle.tscn", "res://Scenes/Player.tscn", "res://Scenes/bullet.tscn"]
+known_scenes=["res://Scenes/Player.tscn", "res://Scenes/tall_zombie.tscn", "res://Scenes/bullet.tscn", "res://Scenes/World.tscn", "res://lightpost-single.tscn", "res://iron_fence.tscn", "res://brick_wall.tscn", "res://crypt.tscn", "res://brick_wall_end.tscn", "res://tree.tscn", "res://steampunk_rifle.tscn", "res://iron-fence-damaged.tscn", "res://grave.tscn", "res://gravestone-bevel.tscn", "res://road.tscn", "res://iron_fence_bar.tscn", "res://gravestone-broken-bevel.tscn"]
+manual_scenes=["res://Scenes/World.tscn", "res://crypt.tscn", "res://road.tscn", "res://brick_wall.tscn", "res://brick_wall_end.tscn", "res://grave.tscn", "res://gravestone-bevel.tscn", "res://gravestone-broken-bevel.tscn", "res://iron_fence.tscn", "res://iron-fence-damaged.tscn", "res://iron_fence_bar.tscn", "res://lightpost-single.tscn", "res://tree.tscn", "res://steampunk_rifle.tscn", "res://Scenes/Player.tscn", "res://Scenes/bullet.tscn", "res://Scenes/tall_zombie.tscn"]
 node_positions={
 "res://Scenes/Player.tscn": Vector2(959.5, 512.5),
 "res://Scenes/World.tscn": Vector2(959.5, 512.5),

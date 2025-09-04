@@ -24,6 +24,10 @@ var instance
 @onready var gun_anim = $Head/Camera3D/Rifle/AnimationPlayer
 @onready var gun_barrel = $Head/Camera3D/Rifle/RayCast3D
 
+func _enter_tree():
+	add_to_group("players")
+	print("Player added to group. Groups: ", get_groups())
+	
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 

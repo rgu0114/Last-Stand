@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhpnlboinnh0x"]
+
+[ext_resource type="PackedScene" uid="uid://btyofpnjksvhy" path="res://Models/tall_zombie.glb" id="1_7fblv"]
+[ext_resource type="Script" path="res://scripts/tall_zombie.gd" id="2_1r8a6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1nfx1"]
+height = 2.27595
+
+[node name="Zombie" type="CharacterBody3D"]
+script = ExtResource("2_1r8a6")
+
+[node name="tall_zombie" parent="." instance=ExtResource("1_7fblv")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.966734, 0)
+shape = SubResource("CapsuleShape3D_1nfx1")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
