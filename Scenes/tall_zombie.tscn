@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhpnlboinnh0x"]
+[gd_scene load_steps=10 format=3 uid="uid://bhpnlboinnh0x"]
 
 [ext_resource type="PackedScene" uid="uid://btyofpnjksvhy" path="res://Models/tall_zombie.glb" id="1_7fblv"]
 [ext_resource type="Script" path="res://scripts/tall_zombie.gd" id="2_1r8a6"]
@@ -6,13 +6,50 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1nfx1"]
 height = 2.27595
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ryx4v"]
+animation = &"zombie_attack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lhaov"]
+animation = &"zombie_run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2hl1c"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_scsln"]
+xfade_time = 0.2
+advance_mode = 2
+advance_condition = &"attack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7pn6w"]
+xfade_time = 0.2
+switch_mode = 2
+advance_mode = 2
+advance_condition = &"run"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_r8wg5"]
+states/zombie_attack/node = SubResource("AnimationNodeAnimation_ryx4v")
+states/zombie_attack/position = Vector2(544, 99.5)
+states/zombie_run/node = SubResource("AnimationNodeAnimation_lhaov")
+states/zombie_run/position = Vector2(343.5, 100)
+transitions = ["Start", "zombie_run", SubResource("AnimationNodeStateMachineTransition_2hl1c"), "zombie_run", "zombie_attack", SubResource("AnimationNodeStateMachineTransition_scsln"), "zombie_attack", "zombie_run", SubResource("AnimationNodeStateMachineTransition_7pn6w")]
+
 [node name="Zombie" type="CharacterBody3D"]
 script = ExtResource("2_1r8a6")
 
 [node name="tall_zombie" parent="." instance=ExtResource("1_7fblv")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.966734, 0)
 shape = SubResource("CapsuleShape3D_1nfx1")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_height_offset = 1.0
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+root_node = NodePath("../tall_zombie")
+root_motion_track = NodePath("Armature/Skeleton3D:mixamorig_Hips")
+tree_root = SubResource("AnimationNodeStateMachine_r8wg5")
+anim_player = NodePath("../tall_zombie/AnimationPlayer")
+parameters/conditions/attack = false
+parameters/conditions/run = false

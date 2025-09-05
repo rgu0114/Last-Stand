@@ -681,9 +681,6 @@ transform = Transform3D(-0.999955, 0, -0.00945955, 0, 1, 0, 0.00945955, 0, -0.99
 [node name="road44" parent="Map/NavigationRegion3D/CSGBox3D" instance=ExtResource("4_5tau2")]
 transform = Transform3D(-0.999955, 0, -0.00945955, 0, 1, 0, 0.00945955, 0, -0.999955, 9.42616, 0.0647194, -18.898)
 
-[node name="Zombie" parent="Map" instance=ExtResource("14_r8bip")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.31926, -0.498499, -13.9726)
-
 [node name="crypt" parent="." instance=ExtResource("3_jnftg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.99568, -0.498499, -3.5084)
 
@@ -1879,3 +1876,15 @@ transform = Transform3D(0.0074697, -0.0055497, 0.999957, 0.000109454, 0.999985, 
 
 [node name="Player" parent="." instance=ExtResource("15_5xw7d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.966009, 0.699175, 2.5155)
+
+[node name="Zombie" parent="." instance=ExtResource("14_r8bip")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.14298, -0.498499, -0.5651)
+
+[node name="Zombie2" parent="." instance=ExtResource("14_r8bip")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.93558, -0.0906845, -4.78226)
+
+[node name="Zombie3" parent="." instance=ExtResource("14_r8bip")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.88675, -0.498498, 13.5584)
+
+[node name="Zombie4" parent="." instance=ExtResource("14_r8bip")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.6294, 0.205009, 7.64435)
