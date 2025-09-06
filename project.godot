@@ -66,6 +66,7 @@ node_positions={
 "res://Scenes/Player.tscn": Vector2(959.5, 512.5),
 "res://Scenes/World.tscn": Vector2(959.5, 512.5),
 "res://Scenes/bullet.tscn": Vector2(959.5, 512.5),
+"res://Scenes/tall_zombie.tscn": Vector2(600, 5300),
 "res://brick_wall.tscn": Vector2(451.185, 254.811),
 "res://brick_wall_end.tscn": Vector2(451.185, 254.811),
 "res://crypt.tscn": Vector2(959.5, 206.5),
