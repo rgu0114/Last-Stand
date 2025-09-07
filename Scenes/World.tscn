@@ -1,5 +1,6 @@
-[gd_scene load_steps=25 format=3 uid="uid://dxheqtrdcm867"]
+[gd_scene load_steps=27 format=3 uid="uid://dxheqtrdcm867"]
 
+[ext_resource type="Script" path="res://Scenes/world.gd" id="1_j7t3q"]
 [ext_resource type="Texture2D" uid="uid://dkgxkyp7ltbp0" path="res://Textures/earth-texture/696.jpg" id="2_p42mw"]
 [ext_resource type="PackedScene" uid="uid://c6h4ndb6lp5go" path="res://crypt.tscn" id="3_jnftg"]
 [ext_resource type="PackedScene" uid="uid://0pgfn6hacqq0" path="res://road.tscn" id="4_5tau2"]
@@ -15,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cgw22r7ik8cva" path="res://lightpost-single.tscn" id="13_4i2lj"]
 [ext_resource type="PackedScene" uid="uid://uh4rgh2ash1i" path="res://tree.tscn" id="14_ln2bv"]
 [ext_resource type="PackedScene" uid="uid://y6w1s5xjbkon" path="res://Scenes/Player.tscn" id="15_5xw7d"]
+[ext_resource type="PackedScene" uid="uid://dnyi54mm4e2dx" path="res://Scenes/hud.tscn" id="17_mdi3d"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2dsjs"]
 albedo_color = Color(0.15158, 0.397304, 0.211387, 1)
@@ -62,6 +64,7 @@ emission = Color(0.697362, 0.361465, 0.22425, 1)
 emission_energy_multiplier = 3.0
 
 [node name="World" type="Node3D"]
+script = ExtResource("1_j7t3q")
 
 [node name="Map" type="Node3D" parent="."]
 
@@ -1862,3 +1865,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5626, -0.498501, -18.4916
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("15_5xw7d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.966009, 0.699175, 2.5155)
+
+[node name="Control" parent="." instance=ExtResource("17_mdi3d")]
