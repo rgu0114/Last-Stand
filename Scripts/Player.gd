@@ -30,6 +30,10 @@ var ammo = 50
 @onready var hud: Control = $"../Control"
 
 
+func _enter_tree():
+	add_to_group("players")
+	print("Player added to group. Groups: ", get_groups())
+	
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
