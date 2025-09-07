@@ -17,6 +17,7 @@ theme_override_font_sizes/font_size = 24
 text = "Lives: 3"
 
 [node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = 20.0
 offset_top = 55.0
 offset_right = 139.0
@@ -25,6 +26,7 @@ theme_override_font_sizes/font_size = 24
 text = "Score: 0"
 
 [node name="AmmoLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = 17.0
 offset_top = 89.0
 offset_right = 136.0

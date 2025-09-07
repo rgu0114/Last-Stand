@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dxheqtrdcm867"]
+[gd_scene load_steps=29 format=3 uid="uid://dxheqtrdcm867"]
 
 [ext_resource type="Script" path="res://Scenes/world.gd" id="1_j7t3q"]
 [ext_resource type="Texture2D" uid="uid://dkgxkyp7ltbp0" path="res://Textures/earth-texture/696.jpg" id="2_p42mw"]
